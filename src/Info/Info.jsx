@@ -33,13 +33,13 @@ function Info(props) {
           {secondInfo}
           <div className="for-mobile">
             <div className="span-block">
-              9:00 - 9:30
+              19:00 - 19:30
             </div>
             <div className="span-block">
-              1 т. 
+              0,5 т. 
             </div>
             <div className="span-block">
-              Во время еды
+              После еды.
             </div>
           </div>
         </p>
