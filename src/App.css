@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .tracker__items {
+  margin: 0 auto;
+} */
+
+@layer base {
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 600;
+    font-style: normal;
+    src: url("../public/fonts/GolosText-SemiBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../public/fonts/GolosText-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../public/fonts/GolosText-Regular.ttf") format("truetype");
+  }
+  html {
+    font-family: Golos_Text, sistem-ui, sans-serif;
+  }
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox {
+  display: none;
+}
+
+/* Стиль для псевдоэлементов */
+.custom-checkbox + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #d3d9d7; /* обычное состояние */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Стиль для активного состояния */
+.custom-checkbox:checked + label {
+  background-color: #effe7d; /* активное состояние */
+}
+
+/* Стиль для галочки (черной) */
+.custom-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid black;
+  border-width: 0 2px 2px 0; /* формируем галочку */
+  transform: rotate(45deg);
+}
+
+/* Стрелочки */
+
+.arrow-button {
+  display: inline-block;
+  border: 2px solid rgba(43, 48, 51, 0.4) #2b3033;
+  padding: 5px;
+  height: 12px;
+  border-width: 0 3px 3px 0;
+}
+.right-arrow {
+  transform: rotate(-45deg);
+  margin: 0 0 0 19px;
+}
+.left-arrow {
+  transform: rotate(135deg);
+  margin: 0 19px 0 0;
+}
+
+@layer components {
+  .tracker {
+    @apply w-[373px] md:w-[768px];
+  }
+  .tracker__items {
+    @apply flex justify-start max-w-[373px] md:max-w-[768px] items-center;
+  }
+  .tracker__items_medium-font {
+    @apply font-medium text-[22px];
+  }
+  .tracker__items_grey-bg-with-border {
+    @apply bg-[#F3F3F3] mt-7 md:mt-[17px] border-[1px] border-[#C7C7C7] rounded-[8px] relative;
+  }
+  .tracker__items_center-with-betweens {
+    @apply md:w-[195px] gap-2.5 mt-5 md:mt-[53px] justify-center md:justify-between items-center font-normal text-[16px];
+  }
+  .my-table {
+    @apply min-w-[373px] md:min-w-[768px] flex pt-4 pb-5 px-5 justify-between;
+  }
+  .block-input {
+    @apply self-end;
+  }
+  .block-input_top-indent {
+    @apply mt-[10px] md:mt-[2px]
+  }
+  .block-input_bottom-indent {
+    @apply mb-[4px] md:mb-[-3px]
+  }
+}

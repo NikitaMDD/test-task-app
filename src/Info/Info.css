@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .span-line {
+    @apply block h-[1px] bg-[#DFDFE0] w-[728px] top-[37.5px];
+  }
+  .span-line_more-indentation {
+    @apply w-[333px] md:w-[728px] top-[54.5px] md:top-[34px];
+  }
+  .my-table__item {
+    @apply flex;
+  }
+  .my-table__item_center {
+    @apply hidden md:flex min-w-[400px] justify-between;
+  }
+  /* justify-between w-[700px] */
+  .my-table__info {
+    @apply flex flex-col justify-between;
+  }
+  /* justify-between w-[700px] */
+  .my-table__item p {
+    @apply mb-[22px] last:mb-[0] md:mb-[0px] md:last:mb-[0] md:mt-[33px] 
+    first:hidden md:first:inline-block first:mt-0 text-[14px] first:text-[16px] first:font-semibold relative;
+  }
+  .for-mobile {
+    @apply flex w-[252px] justify-between md:hidden text-[12px] text-[#808187] mt-1 md:mt-0;
+  }
+}

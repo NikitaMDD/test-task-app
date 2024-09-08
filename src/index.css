@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 600;
+    font-style: normal;
+    src: url('../public/fonts/GolosText-SemiBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 500;
+    font-style: normal;
+    src: url('../public/fonts/GolosText-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: Golos_Text;
+    font-weight: 400;
+    font-style: normal;
+    src: url('../public/fonts/GolosText-Regular.ttf') format('truetype');
+  }
+  html{
+    font-family: Golos_Text, sistem-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .main{
+    @apply h-[85vh] flex flex-col justify-center items-center;
+  }
+}
